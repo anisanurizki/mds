@@ -1,4 +1,4 @@
-publish: Daily
+name: publish
 
 on:
   schedule:
