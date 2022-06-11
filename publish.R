@@ -5,10 +5,8 @@ library(rtweet)
 library(mongolite)
 
 ##Scraping Data
-urlPT <- "https://www.economy.com/indonesia/indicators"
-data <- urlPT %>% read_html() %>% html_table
-data <- data[[1]]
-View(data)
+url <- "https://harga-emas.org/1-gram/"
+emas <- read_html(url)
 
 #Financial Market (Daily)
 market = data[42:44,]
