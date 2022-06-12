@@ -3,7 +3,6 @@ library(dplyr)
 library(rvest)
 library(rtweet)
 library(mongolite)
-library(rtweet)
 
 ##Scraping Data
 url <- "https://harga-emas.org/1-gram/"
