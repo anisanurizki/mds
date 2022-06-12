@@ -21,7 +21,7 @@ connection_string = Sys.getenv("MONGODB_CONNECTION")
 harga = mongo(collection="Emas_24_Karat",
               db="Harga_Emas",
               url=connection_string)
-hargaemas$insert(emas)
+harga$insert(emas)
 
 
 # Publish to Twitter
