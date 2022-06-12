@@ -11,17 +11,17 @@ data <- url %>% read_html() %>% html_table
 data <- data[[1]]
 View(data)
 
-emas <- data[3:5,-c(3:4)]
+emas <- data[3:6,-c(3:4)]
 
 ##Menyimpan update data ke MongoDB Database
 #Menyiapkan koneksi
 connection_string = Sys.getenv("MONGODB_CONNECTION")
 
 #Markets
-harga = mongo(collection="cluster0",
-              db="UAS-MDS",
+harga = mongo(collection="Emas_24_Karat",
+              db="Harga_Emas",
               url=connection_string)
-pasar$insert(market)
+hargaemas$insert(emas)
 
 
 # Publish to Twitter
