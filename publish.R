@@ -35,17 +35,17 @@ indikator_token <- create_token(
 )
 
 ##Tweet
-emas_tweet <- paste0("Update" data[2,1],
+emas_tweet <- paste0("Update", data[2,1],
                      "\n",
                      "\n",
-                     "USD:" data[3,2],
+                     "USD:", data[3,2],
                      "\n",
-                     "IDR:" data[5,2],
-                     "\n"
-                     "KURS:" data[4,2]
+                     "IDR:", data[5,2],
+                     "\n",
+                     "KURS:", data[4,2],
                      "\n",
                      "\n",
-                    "Update terakhir pada" data[6,2])
+                     "Update terakhir pada", data[6,2])
 
 ## Post the image to Twitter
 post_tweet(status = emas_tweet, token = indikator_token)
