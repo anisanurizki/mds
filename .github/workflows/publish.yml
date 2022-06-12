@@ -38,4 +38,4 @@ jobs:
           install.packages(c("dplyr", "rtweet", "rvest", "mongolite", "xml", "xml2"))
         shell: Rscript {0}
       - name: Create and post tweet
-        run: Rscript Daily.R 
+        run: Rscript publish.R 
