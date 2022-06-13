@@ -29,7 +29,7 @@ harga$insert(emas)
 
 # Publish to Twitter
 ##Create Twitter token
-indikator_token <- create_token(
+indikator_token1 <- create_token(
   app = "anrizki",
   consumer_key =    Sys.getenv("TWITTER_CONSUMER_API_KEY"),
   consumer_secret = Sys.getenv("TWITTER_CONSUMER_API_SECRET"),
@@ -38,9 +38,9 @@ indikator_token <- create_token(
 )
 
 ## 1st Hashtag
-hashtag <- c("ManajemenData","ManajemenDataStatistika", "github","rvest","rtweet", "MongoDB", "bot", "opensource", "gold", "silver")
+#hashtag <- c("ManajemenData","ManajemenDataStatistika", "github","rvest","rtweet", "MongoDB", "bot", "opensource", "gold", "silver")
 
-samp_word <- sample(hashtag, 3)
+#samp_word <- sample(hashtag, 3)
 
 ##Tweet
 emas_tweet <- paste0("Update Harga 1 Gram Emas 24 Karat",
@@ -53,10 +53,7 @@ emas_tweet <- paste0("Update Harga 1 Gram Emas 24 Karat",
                      "IDR: ", data[5,2],
                      "\n",
                      "\n",
-                     "Sementara itu, KURS USD ke IDR saat ini adalah ", data[4,2],
-                     "\n",
-                     "\n",                  
-                     "#",samp_word)
+                     "Sementara itu, KURS USD ke IDR saat ini adalah ", data[4,2])
 
 ## Post the image to Twitter
-post_tweet(status = emas_tweet, token = indikator_token)
+post_tweet(status = emas_tweet, token = indikator_token1)
