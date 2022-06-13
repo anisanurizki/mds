@@ -47,7 +47,7 @@ emas_tweet <- paste0("Update Harga 1 Gram Emas 24 Karat",
                      "\n",
                      "IDR: ", data[5,2],
                      "\n",
-                     "KURS: ", data[4,2],
+                     "KURS: ", data[4,2]
                      )
 
 ## Post the image to Twitter
