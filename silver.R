@@ -43,7 +43,7 @@ hashtag <- c("ManajemenData","ManajemenDataStatistika", "github","rvest","rtweet
 samp_word <- sample(hashtag, 3)
 
 ##Tweet
-emas_tweet <- paste0("Update Harga 1 Gram Perak",
+silver_tweet <- paste0("Update Harga 1 Gram Perak",
                      "\n",
                      silver[3,1],
                      "\n",
@@ -56,4 +56,4 @@ emas_tweet <- paste0("Update Harga 1 Gram Perak",
                      "#",samp_word)
 
 ## Post the image to Twitter
-post_tweet(status = emas_tweet, token = indikator_token)
+post_tweet(status = silver_tweet, token = indikator_token)
