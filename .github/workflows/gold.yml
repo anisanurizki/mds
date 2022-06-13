@@ -6,7 +6,7 @@
 # See https://github.com/r-lib/actions/tree/master/examples#readme for
 # additional example workflows available for the R community.
 
-name: publish
+name: gold
 
 on:
   schedule:
@@ -38,4 +38,4 @@ jobs:
           install.packages(c("dplyr", "rtweet", "rvest", "mongolite", "xml", "xml2"))
         shell: Rscript {0}
       - name: Create and post tweet
-        run: Rscript publish.R 
+        run: Rscript gold.R 
