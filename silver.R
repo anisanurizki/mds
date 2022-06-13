@@ -36,11 +36,6 @@ indikator_token <- create_token(
   access_secret =   Sys.getenv("TWITTER_ACCESS_TOKEN_SECRET")
 )
 
-## 1st Hashtag
-hashtag <- c("ManajemenData","ManajemenDataStatistika", "github","rvest","rtweet", "MongoDB", "bot", "opensource", "gold", "silver")
-
-samp_word <- sample(hashtag, 3)
-
 ##Tweet
 silver_tweet <- paste0("Update Harga 1 Gram Perak",
                      "\n",
@@ -49,10 +44,7 @@ silver_tweet <- paste0("Update Harga 1 Gram Perak",
                      "\n",
                      "USD: ", silver[1,2],
                      "\n",
-                     "IDR: ", silver[2,2],
-                     "\n",
-                     "\n",                 
-                     "#",samp_word)
+                     "IDR: ", silver[2,2])
 
 ## Post the image to Twitter
 post_tweet(status = silver_tweet, token = indikator_token)
