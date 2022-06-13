@@ -15,12 +15,16 @@ emas <- data[3:6,-c(3:4)]
 
 ##Menyimpan update data ke MongoDB Database
 #Menyiapkan koneksi
-connection_string = Sys.getenv("MONGODB_CONNECTION")
+#connection_string = Sys.getenv("MONGODB_CONNECTION")
 
 #Markets
-harga = mongo(collection="Emas_24_Karat",
-              db="Harga_Emas",
-              url=connection_string)
+harga = mongo(
+  collection = "Emas_24_Karat",
+  db = "Harga_Emas",
+  url = "mongodb://localhost:27017",
+  verbose = FALSE,
+  options = ssl_options()
+)
 harga$insert(emas)
 
 
