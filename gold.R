@@ -37,11 +37,6 @@ indikator_token1 <- create_token(
   access_secret =   Sys.getenv("TWITTER_ACCESS_TOKEN_SECRET")
 )
 
-## 1st Hashtag
-#hashtag <- c("ManajemenData","ManajemenDataStatistika", "github","rvest","rtweet", "MongoDB", "bot", "opensource", "gold", "silver")
-
-#samp_word <- sample(hashtag, 3)
-
 ##Tweet
 emas_tweet <- paste0("Update Harga 1 Gram Emas 24 Karat",
                      "\n",
