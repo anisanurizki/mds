@@ -10,7 +10,7 @@ name: silver
 
 on:
   schedule:
-    - cron: '0 13 * * *'  # every six hours
+    - cron: '15 13 * * *'  # every six hours
 
 permissions:
   contents: read
