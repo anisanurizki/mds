@@ -15,13 +15,12 @@ emas <- data[3:6,-c(3:4)]
 
 ##Menyimpan update data ke MongoDB Database
 #Menyiapkan koneksi
-#connection_string = Sys.getenv("MONGODB_CONNECTION")
+connection_string = Sys.getenv("MONGODB_CONNECTION")
 
 #Markets
 harga = mongo(
   collection = "Emas_24_Karat",
   db = "Harga_Emas",
-  url = "mongodb://localhost:27017",
   verbose = FALSE,
   options = ssl_options()
 )
@@ -39,17 +38,17 @@ indikator_token <- create_token(
 )
 
 ##Tweet
-emas_tweet <- paste0("Update", data[2,1],
+emas_tweet <- paste0("Update ", data[2,1],
                      "\n",
                      "\n",
-                     "USD:", data[3,2],
+                     "USD: ", data[3,2],
                      "\n",
-                     "IDR:", data[5,2],
+                     "IDR: ", data[5,2],
                      "\n",
-                     "KURS:", data[4,2],
+                     "KURS: ", data[4,2],
                      "\n",
                      "\n",
-                     "Update terakhir pada", data[6,2])
+                     "Update terakhir pada ", data[6,2])
 
 ## Post the image to Twitter
 post_tweet(status = emas_tweet, token = indikator_token)
