@@ -10,7 +10,7 @@ name: publish
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # every six hours
+    - cron: '*/5 * * * *'  # every six hours
 
 permissions:
   contents: read
