@@ -31,7 +31,7 @@ harga$insert(emas)
 # Publish to Twitter
 ##Create Twitter token
 indikator_token <- create_token(
-  app = "Harga Emas",
+  app = "anrizki",
   consumer_key =    Sys.getenv("TWITTER_CONSUMER_API_KEY"),
   consumer_secret = Sys.getenv("TWITTER_CONSUMER_API_SECRET"),
   access_token =    Sys.getenv("TWITTER_ACCESS_TOKEN"),
