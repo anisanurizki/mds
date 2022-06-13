@@ -9,7 +9,6 @@ url2 <- "https://harga-emas.org/perak/"
 
 data2 <- url2 %>% read_html() %>% html_table
 data2 <- data2[[1]]
-View(data)
 
 silver <- data2[c(4,6,8),-c(2,4,5)]
 
