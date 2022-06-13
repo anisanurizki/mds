@@ -38,7 +38,7 @@ indikator_token <- create_token(
 )
 
 ##Tweet
-emas_tweet <- paste0("Update Harga Emas 24 Karat", 
+emas_tweet <- paste0("Update Harga 1 Gram Emas 24 Karat",
                      "\n",
                      data[6,2],
                      "\n",
