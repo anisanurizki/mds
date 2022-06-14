@@ -77,8 +77,7 @@ silver_tweet <- paste0("Update Harga Perak",
                        "\n",
                        "USD: ", silver[1,3],
                        "\n",
-                       "IDR: ", silver[3,3],
-                      )
+                       "IDR: ", silver[3,3])
 
 ## Post the image to Twitter
 post_tweet(status = gold_tweet, token = indikator_token)
