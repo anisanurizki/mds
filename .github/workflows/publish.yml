@@ -6,11 +6,11 @@
 # See https://github.com/r-lib/actions/tree/master/examples#readme for
 # additional example workflows available for the R community.
 
-name: gold
+name: publish
 
 on:
   schedule:
-    - cron: '* * * * *'  # run on the 0, 7, 14, and 21st hour
+    - cron: '* */7 * * *'  # run on the 0, 7, 14, and 21st hour
 
 permissions:
   contents: read
@@ -38,4 +38,4 @@ jobs:
           install.packages(c("dplyr", "rtweet", "rvest", "mongolite", "xml", "xml2"))
         shell: Rscript {0}
       - name: Create and post tweet
-        run: Rscript gold.R 
+        run: Rscript publish.R 
