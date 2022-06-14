@@ -45,10 +45,7 @@ emas_tweet <- paste0("Update Harga 1 Gram Emas 24 Karat",
                      "\n",
                      "USD: ", data[3,2],
                      "\n",
-                     "IDR: ", data[5,2],
-                     "\n",
-                     "\n",
-                     "Sementara itu, KURS USD ke IDR saat ini adalah ", data[4,2])
+                     "IDR: ", data[5,2])
 
 ## Post the image to Twitter
 post_tweet(status = emas_tweet, token = indikator_token1)
