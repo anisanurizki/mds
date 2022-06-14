@@ -53,31 +53,34 @@ indikator_token <- create_token(
 ##Tweet Gold
 gold_tweet <- paste0("Update Harga 1 Gram Emas 24 Karat",
                      "\n",
-                     gold[4,2],
+                     gold[4,2], " WIB",
                      "\n",
                      "\n",
                      "USD: ", gold[1,2],
                      "\n",
-                     "IDR: ", gold[3,2])
+                     "IDR : ", gold[3,2],
+                    "\n",
+                    "\n",
+                    "Sementara itu, KURS USD/IDR saat ini adalah", gold[2,2])
 
 ##Tweet Silver
 silver_tweet <- paste0("Update Harga Perak",
                        "\n",
-                       silver[6,1],
+                       silver[6,1],  " WIB",
                        "\n",
                        "\n",
                        "Per 1 Gram",
                        "\n",
                        "USD: ", silver[2,3],
                        "\n",
-                       "IDR: ", silver[4,3],
+                       "IDR : ", silver[4,3],
                       "\n",
                        "\n",
                        "Per 1 Ons",
                        "\n",
                        "USD: ", silver[1,3],
                        "\n",
-                       "IDR: ", silver[3,3])
+                       "IDR : ", silver[3,3])
 
 ## Post the image to Twitter
 post_tweet(status = gold_tweet, token = indikator_token)
