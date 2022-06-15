@@ -10,7 +10,7 @@ name: gold
 
 on:
   schedule:
-    - cron: '0 12 * * *'  # run on the 0, 7, 14, and 21st hour
+    - cron: '0 */7 * * *'  # run on the 0, 7, 14, and 21st hour
 
 permissions:
   contents: read
