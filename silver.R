@@ -55,6 +55,6 @@ silver_tweet <- paste0("Update Harga Perak",
                        "IDR: Rp", silver[3,3],
                        "\n",
                        "\n",
-                       "#silver, #jewelry", #priceupdate)
+                       "#silver, #jewelry", "#priceupdate")
 
 post_tweet(status = silver_tweet, token = indikator_token)
