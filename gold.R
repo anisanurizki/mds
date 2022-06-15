@@ -49,7 +49,7 @@ gold_tweet <- paste0("Update Harga 1 Gram Emas 24 Karat",
                     "Sementara itu, KURS USD/IDR saat ini adalah Rp", gold[2,2],
                     "\n",
                     "\n",
-                    "#gold #kurs #jewelry #priceupdate")
+                    "#gold #kurs #jewelry #update")
 
 ## Post the image to Twitter
 post_tweet(status = gold_tweet, token = indikator_token)
