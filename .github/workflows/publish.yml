@@ -10,7 +10,7 @@ name: publish
 
 on:
   schedule:
-    - cron: '* */7 * * *'  # run on the 0, 7, 14, and 21st hour
+    - cron: '0 17 * * *'  # run on the 0, 7, 14, and 21st hour
 
 permissions:
   contents: read
