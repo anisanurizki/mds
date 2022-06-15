@@ -10,7 +10,7 @@ name: silver
 
 on:
   schedule:
-    - cron: '0 10 * * *'  # run on the 0, 7, 14, and 21st hour
+    - cron: '0 11 * * *'  # run on the 0, 7, 14, and 21st hour
 
 permissions:
   contents: read
