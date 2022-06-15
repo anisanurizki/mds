@@ -1,2 +1,1 @@
-# mds
-bot twitter yang memberi update terkait harga emas setiap harinya
+Twitter Bot update harga emas, perak dan kurs USD/IDR setiap harinya, disimpan di MongoDB dan dikirim ke twitter melalui {rtweet}.
