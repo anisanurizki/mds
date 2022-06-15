@@ -6,17 +6,11 @@ library(mongolite)
 
 ##Scraping Data
 url  <- "https://harga-emas.org/1-gram/"
-url2 <- "https://harga-emas.org/perak/"
 
 # gold
 data <- url %>% read_html() %>% html_table
 data <- data[[1]]
 gold <- data[3:6,-c(3:4)]
-
-#silver
-data2  <- url2 %>% read_html() %>% html_table
-data2  <- data2[[1]]
-silver <- data2[3:8,-c(4:5)]
 
 ##Menyimpan update data ke MongoDB Database
 #Menyiapkan koneksi
@@ -30,15 +24,6 @@ harga = mongo(
   options = ssl_options()
 )
 harga$insert(gold)
-
-#harga silver
-harga2 = mongo(
-  collection = "Silver",
-  db = "Harga",
-  verbose = FALSE,
-  options = ssl_options()
-)
-harga2$insert(silver)
 
 # Publish to Twitter
 ##Create Twitter token
@@ -61,27 +46,10 @@ gold_tweet <- paste0("Update Harga 1 Gram Emas 24 Karat",
                      "IDR: Rp", gold[3,2],
                     "\n",
                     "\n",
-                    "Sementara itu, KURS USD/IDR saat ini adalah Rp", gold[2,2])
-
-##Tweet Silver
-silver_tweet <- paste0("Update Harga Perak",
-                       "\n",
-                       silver[6,1],  " WIB",
-                       "\n",
-                       "\n",
-                       "Per 1 Gram",
-                       "\n",
-                       "USD: $", silver[2,3],
-                       "\n",
-                       "IDR: Rp", silver[4,3],
-                      "\n",
-                       "\n",
-                       "Per 1 Ons",
-                       "\n",
-                       "USD: $", silver[1,3],
-                       "\n",
-                       "IDR: Rp", silver[3,3])
+                    "Sementara itu, KURS USD/IDR saat ini adalah Rp", gold[2,2],
+                    "\n",
+                    "\n",
+                    "#gold #kurs #jewelry #priceupdate)
 
 ## Post the image to Twitter
 post_tweet(status = gold_tweet, token = indikator_token)
-post_tweet(status = silver_tweet, token = indikator_token)
