@@ -10,8 +10,7 @@ name: silver
 
 on:
   schedule:
-    - cron: '0 0 1 * *'  # every month
-
+    - cron: '0 0 * * *'  # everyday
 permissions:
   contents: read
 
