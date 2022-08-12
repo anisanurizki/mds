@@ -10,7 +10,7 @@ name: gold
 
 on:
   schedule:
-    - cron: '* * * * *'  # everyday
+    - cron: '0 0 * * *'  # everyday
 
 permissions:
   contents: read
