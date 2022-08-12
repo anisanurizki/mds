@@ -10,7 +10,7 @@ name: gold
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # everyday
+    - cron: '* * * * *'  # everyday
 
 permissions:
   contents: read
@@ -20,7 +20,7 @@ jobs:
     runs-on: windows-latest
     strategy:
       matrix:
-        r-version: ['4.1.1']
+        r-version: ['4.1.3']
     env:
       MONGODB_CONNECTION: ${{ secrets.MONGODB_CONNECTION }}
       TWITTER_CONSUMER_API_KEY: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
