@@ -20,9 +20,8 @@ connection_string = Sys.getenv("MONGODB_CONNECTION")
 harga = mongo(
   collection = "Emas_24_Karat",
   db = "Harga_Emas",
-  verbose = FALSE,
-  options = ssl_options()
-)
+  url = connection_string)
+
 harga$insert(gold)
 
 # Publish to Twitter
