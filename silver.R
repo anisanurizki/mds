@@ -20,7 +20,7 @@ connection_string = Sys.getenv("MONGODB_CONNECTION")
 harga2 = mongo(
   collection = "Silver",
   db = "Harga",
-    url = connection_string)
+  url = connection_string)
 
 harga2$insert(silver)
 
