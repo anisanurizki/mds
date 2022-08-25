@@ -2,8 +2,7 @@ name: gold
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # run on the 0, 6, and 12st hour
-
+    - cron: '0 0 * * *'  # everyday
 permissions:
   contents: read
 jobs:
